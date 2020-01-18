@@ -20,39 +20,39 @@ export class LifehooksComponent implements
   @Input() prop: string;
 
   constructor() { 
-    console.log('hook - constructor')
+    //console.log('hook - constructor')
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('hook - ngOnChanges')
-    console.log(changes)
+    //console.log('hook - ngOnChanges')
+    //console.log(changes)
   }
 
   ngOnInit() {
-    console.log('hook - ngOnInit: after creating the component')
+    //console.log('hook - ngOnInit: after creating the component')
   }
 
   ngDoCheck() {
-    console.log('hook - ngDoCheck: call after any changes in angular app')
+    //console.log('hook - ngDoCheck: call after any changes in angular app')
   }
 
   ngAfterContentInit() {
-    console.log('hook - ngAfterContentInit')
+    //console.log('hook - ngAfterContentInit')
   }
 
   ngAfterContentChecked() {
-    console.log('hook - ngAfterContentChecked')
+    //console.log('hook - ngAfterContentChecked')
   }
 
   ngAfterViewInit() {
-    console.log('hook - ngAfterViewInit')
+    //console.log('hook - ngAfterViewInit')
   }
 
   ngAfterViewChecked() {
-    console.log('hook - ngAfterViewChecked')
+    //console.log('hook - ngAfterViewChecked')
   }
 
   ngOnDestroy() {
-    console.log('hook - ngOnDestroy')
+    //console.log('hook - ngOnDestroy')
   }
 }
