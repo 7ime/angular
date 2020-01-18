@@ -1,0 +1,4 @@
+<div *ngFor="let item of list">
+    <div [ngClass]="item.desc ? 'red' : 'blue'">{{ item.name }}</div>
+    <div *ngIf="item.desc">{{ item.desc }}</div>
+</div>
