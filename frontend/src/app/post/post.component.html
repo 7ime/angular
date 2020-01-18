@@ -2,3 +2,19 @@
     <div [ngClass]="item.desc ? 'red' : 'blue'">{{ item.name }}</div>
     <div *ngIf="item.desc">{{ item.desc }}</div>
 </div>
+
+<div>
+    <input type="text" (input)="onInput($event)">
+</div>
+
+<div>
+    <strong>{{ inputValue }}</strong>
+</div>
+
+<div>
+    <h2>Two way binding</h2>
+    <input type="text" [(ngModel)]="twoWayBindingValue">
+    <strong>{{twoWayBindingValue}}</strong>
+</div>
+
+

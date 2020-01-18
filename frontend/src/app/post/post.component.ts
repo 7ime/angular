@@ -7,11 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   list = [
     {
       name: '1',
@@ -20,5 +15,18 @@ export class PostComponent implements OnInit {
     {
       name: '2'
     }
-  ]
+  ];
+
+  inputValue = '';
+
+  twoWayBindingValue = 'Initial';
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  onInput(event) {
+    this.inputValue = event.target.value;
+  }
 }

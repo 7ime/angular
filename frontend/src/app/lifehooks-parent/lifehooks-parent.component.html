@@ -1,0 +1,10 @@
+<hr>
+<p>lifehooks-parent works!</p>
+<input type="text" (input)="onInput($event)">
+<br>
+<button (click)="onToggleLifeHooksComponent()">Toggle show lifehooks component</button>
+<br>
+<ng-template [ngIf]="isShowLifeHooksComponent">
+    <app-lifehooks [prop]="props"></app-lifehooks>
+</ng-template>
+
