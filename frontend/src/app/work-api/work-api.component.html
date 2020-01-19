@@ -1,0 +1,15 @@
+<p>work-api works!</p>
+<button (click)="addPosts()">Add posts</button>
+
+<div *ngIf="!isLoading else loadingBlock">
+    <div *ngFor="let post of posts">
+        <a [routerLink]="['/api', post.id]">
+            <p>{{post.id}}</p>
+            <p>{{post.title}}</p>
+        </a>
+    </div>
+</div>
+
+<ng-template #loadingBlock>
+    <p>...Loading</p>
+</ng-template>

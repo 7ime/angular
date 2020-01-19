@@ -1,0 +1,13 @@
+.menu {
+    display: flex;
+    border-bottom: 1px solid #eee;
+
+    & a {
+        text-decoration: none;
+        padding: 10px 20px;
+
+        &.active {
+            color: red;
+        }
+    }
+}

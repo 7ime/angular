@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,13 @@ import { LifehooksComponent } from './lifehooks/lifehooks.component';
 import { LifehooksParentComponent } from './lifehooks-parent/lifehooks-parent.component';
 import { AppDataService } from './services/app-data.service';
 import { SmartComponent } from './smart/smart.component';
+import { WorkApiComponent } from './work-api/work-api.component';
+import { PageApiComponent } from './pages/page-api/page-api.component';
+import { PageBasicsComponent } from './pages/page-basics/page-basics.component';
+import { HeaderComponent } from './header/header.component';
+import { PagePostComponent } from './pages/page-post/page-post.component';
+import { PageErrorComponent } from './pages/page-error/page-error.component';
+
 
 @NgModule({
   declarations: [
@@ -24,12 +32,19 @@ import { SmartComponent } from './smart/smart.component';
     ChildComponent,
     LifehooksComponent,
     LifehooksParentComponent,
-    SmartComponent
+    SmartComponent,
+    WorkApiComponent,
+    PageApiComponent,
+    PageBasicsComponent,
+    HeaderComponent,
+    PagePostComponent,
+    PageErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     AppDataService
