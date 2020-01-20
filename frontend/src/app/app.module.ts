@@ -20,6 +20,11 @@ import { PageBasicsComponent } from './pages/page-basics/page-basics.component';
 import { HeaderComponent } from './header/header.component';
 import { PagePostComponent } from './pages/page-post/page-post.component';
 import { PageErrorComponent } from './pages/page-error/page-error.component';
+import {StoreModule} from "@ngrx/store";
+import {appReducers} from "../store/reducers/app.reducers";
+import {StoreRouterConnectingModule} from "@ngrx/router-store";
+import {environment} from "../environments/environment.prod";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 
 
 @NgModule({
@@ -44,7 +49,10 @@ import { PageErrorComponent } from './pages/page-error/page-error.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(appReducers),
+    StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [
     AppDataService
